@@ -1,0 +1,46 @@
+{
+  "name": "request-midi-access",
+  "description": "requestMIDIAccess for all",
+  "version": "0.9.1",
+  "author": "Nao Yonamine <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/request-midi-access/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eater": "^3.0.0-5",
+    "eatest": "^0.4.0",
+    "eslint": "^3.0.1",
+    "npm-run-all": "^2.3.0",
+    "web-midi-test-api": "^0.1.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "index.js"
+  ],
+  "homepage": "https://github.com/mohayonao/request-midi-access/",
+  "keywords": [
+    "browser",
+    "midi",
+    "webmidiapi"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/request-midi-access.git"
+  },
+  "scripts": {
+    "clean": "rm -rf npm-debug.log",
+    "lint": "eslint index.js test.js",
+    "postversion": "git push && git push --tags && npm run clean",
+    "prepublish": "npm-run-all clean lint test",
+    "preversion": "npm-run-all clean lint test",
+    "test": "eater test.js",
+    "travis": "npm-run-all lint test"
+  }
+}

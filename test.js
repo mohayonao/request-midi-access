@@ -2,7 +2,7 @@
 
 const assert = require("assert");
 const test = require("eatest");
-const WebMIDITestAPI = require("web-midi-test-api");
+const webmidi = require("web-midi-test-api");
 
 test.fork("not browser", () => {
   global.window = null;
@@ -26,11 +26,9 @@ test.fork("not supported", () => {
 });
 
 test.fork("supported", () => {
-  const api = new WebMIDITestAPI();
-
   global.window = {};
   global.window.navigator = {};
-  global.window.navigator.requestMIDIAccess = api.requestMIDIAccess;
+  global.window.navigator.requestMIDIAccess = webmidi.requestMIDIAccess;
 
   const requestMIDIAccess = require(".");
 

@@ -12,7 +12,7 @@
     "eatest": "^0.4.0",
     "eslint": "^3.0.1",
     "npm-run-all": "^2.3.0",
-    "web-midi-test-api": "^0.1.1"
+    "web-midi-test-api": "^0.2.0"
   },
   "engines": {
     "node": ">= 4.0.0"

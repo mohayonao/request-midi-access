@@ -1,6 +1,6 @@
 "use strict";
 
-const window = global.window || {};
+var window = global.window || {};
 
 function requestMIDIAccess(opts) {
   opts = opts || {};
